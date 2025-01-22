@@ -1,0 +1,24 @@
+[project]
+name = "rgb_spot_color_wheel"
+version = "0.0.1"
+description = "A color wheel for RGB spot lights."
+authors = [
+    {name = "Tibor David", email = "tibor.david07@gmail.com"},
+]
+dependencies = ["pyqt6>=6.8.0", "pyserial>=3.5", "pillow>=11.0.0"]
+requires-python = ">=3.9"
+readme = "README.md"
+license = {text = "MIT"}
+
+[project.scripts]
+rgb_spot_color_wheel = "rgb_spot_color_wheel.__main__:_main"
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.setuptools.package-data]
+"rgb_spot_color_wheel.resources" = ["*.png"]
+
+[tool.pdm]
+distribution = true
